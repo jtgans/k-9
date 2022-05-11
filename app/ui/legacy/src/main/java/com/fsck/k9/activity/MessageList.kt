@@ -1096,10 +1096,13 @@ open class MessageList :
             menu.findItem(R.id.toggle_message_view_theme).isVisible = false
             menu.findItem(R.id.show_headers).isVisible = false
         } else {
-            // hide prev/next buttons in split mode
             if (displayMode != DisplayMode.MESSAGE_VIEW) {
+                // hide prev/next buttons in split mode
                 menu.findItem(R.id.next_message).isVisible = false
                 menu.findItem(R.id.previous_message).isVisible = false
+
+                // Always show the compose menu, since we can't deselect messages in split mode
+                menu.findItem(R.id.compose).isVisible = true
             } else {
                 val ref = messageViewFragment!!.messageReference
                 val initialized = messageListFragment != null &&
