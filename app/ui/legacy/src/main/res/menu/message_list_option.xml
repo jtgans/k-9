@@ -11,21 +11,12 @@
     MessageList.configureMenu() if you make any changes to this file.
     -->
 
-    <!-- MessageList -->
+    <!-- MessageView -->
     <item
-        android:id="@+id/search"
-        android:icon="?attr/iconActionSearch"
+        android:id="@+id/delete"
+        android:icon="?attr/iconActionDelete"
         app:showAsAction="always"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
-        android:title="@string/search_action"/>
-
-    <!-- MessageList -->
-    <item
-        android:id="@+id/search_remote"
-        android:icon="?attr/iconActionRemoteSearch"
-        app:showAsAction="always"
-        android:title="@string/action_remote_search"
-        android:visible="false"/>
+        android:title="@string/delete_action"/>
 
     <!-- MessageView -->
     <item
@@ -36,17 +27,31 @@
 
     <!-- MessageView -->
     <item
-        android:id="@+id/delete"
-        android:icon="?attr/iconActionDelete"
+        android:id="@+id/move"
+        android:icon="?attr/iconActionMove"
         app:showAsAction="always"
-        android:title="@string/delete_action"/>
+        android:title="@string/move_action"/>
 
     <!-- MessageView -->
     <item
-        android:id="@+id/toggle_unread"
-        android:icon="?attr/iconActionMarkAsUnread"
+        android:id="@+id/copy"
+        android:icon="?attr/iconActionCopy"
         app:showAsAction="always"
-        android:title="@string/mark_as_unread_action"/>
+        android:title="@string/copy_action"/>
+
+    <!-- MessageView -->
+    <item
+        android:id="@+id/spam"
+        android:icon="?attr/iconActionSpam"
+        app:showAsAction="always"
+        android:title="@string/spam_action"/>
+
+    <!-- always -->
+    <item
+        android:id="@+id/compose"
+        android:icon="?attr/iconActionCompose"
+        app:showAsAction="ifRoom"
+        android:title="@string/compose_action"/>
 
     <!-- MessageView -->
     <item
@@ -65,24 +70,10 @@
 
     <!-- MessageView -->
     <item
-        android:id="@+id/spam"
-        android:icon="?attr/iconActionSpam"
-        app:showAsAction="ifRoom"
-        android:title="@string/spam_action"/>
-
-    <!-- MessageView -->
-    <item
-        android:id="@+id/move"
-        android:icon="?attr/iconActionMove"
-        app:showAsAction="ifRoom"
-        android:title="@string/move_action"/>
-
-    <!-- MessageView -->
-    <item
-        android:id="@+id/copy"
-        android:icon="?attr/iconActionCopy"
-        app:showAsAction="ifRoom"
-        android:title="@string/copy_action"/>
+        android:id="@+id/toggle_unread"
+        android:icon="?attr/iconActionMarkAsUnread"
+        app:showAsAction="never"
+        android:title="@string/mark_as_unread_action"/>
 
     <!-- MessageView -->
     <item
@@ -95,7 +86,7 @@
     <item
         android:id="@+id/single_message_options"
         android:icon="?attr/iconActionSingleMessageOptions"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:title="@string/single_message_options_action">
         <menu>
             <item
@@ -151,18 +142,27 @@
           app:showAsAction="never"
           android:title="@string/show_headers_action"/>
 
-    <!-- always -->
+    <!-- MessageList -->
     <item
-        android:id="@+id/compose"
-        android:icon="?attr/iconActionCompose"
-        app:showAsAction="ifRoom"
-        android:title="@string/compose_action"/>
+        android:id="@+id/search"
+        android:icon="?attr/iconActionSearch"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:title="@string/search_action"/>
+
+    <!-- MessageList -->
+    <item
+        android:id="@+id/search_remote"
+        android:icon="?attr/iconActionRemoteSearch"
+        app:showAsAction="always"
+        android:title="@string/action_remote_search"
+        android:visible="false"/>
 
     <!-- MessageList -->
     <item
         android:id="@+id/set_sort"
         android:icon="?attr/iconActionSort"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:title="@string/sort_by">
         <menu>
             <item
