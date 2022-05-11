@@ -41,12 +41,12 @@
                 android:id="@+id/message_list_container"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="5"
+                android:layout_weight="2"
                 tools:layout="@layout/message_list_fragment" />
 
             <View
                 android:id="@+id/message_list_divider"
-                android:layout_width="1px"
+                android:layout_width="80px"
                 android:layout_height="fill_parent"
                 android:background="?attr/messageListDividerColor"
                 tools:ignore="PxUsage"/>
@@ -55,7 +55,7 @@
                 android:id="@+id/message_view_container"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 tools:layout="@layout/message" />
 
         </LinearLayout>
